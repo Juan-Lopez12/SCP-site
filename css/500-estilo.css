@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: "helvetica";
+}
+
+header, .main, footer {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+header nav {
+    background: #363636;
+    overflow: hidden;
+    clear: both;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a {
+    padding: 15px 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.07em;
+}
+
+header nav ul li a:hover {
+    background: #646464;
+}
+
+header nav ul li a span {
+    color: red;
+}
+
+.main {
+    width: 70%;
+}
+
+.idioma ul {
+    text-decoration: none;
+}
+
+.idioma ul li {
+    border: 1px solid #32680f;
+    background: #255703;
+    display: block;
+    float: right;
+    /* margin-top: 28px; */
+}
+
+.idioma ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 0.72em;
+    padding: 6px;
+}
+
+
+.idioma ul li a:hover {
+    background: #409608;
+}
+
+footer {
+    clear: both;
+    padding: 16px 0px;
+    text-align: center;
+    font-size: 1.2em;
+    background: #363636;
+}
+
+.logo {
+    float: left;
+    margin: 10px 10px;
+}
+
+.logo-letra {
+    font-size: 3em;
+    margin-top: 60px;
+    margin-left: 20px;
+    /* text-align: center; */
+    display: inline-block;
+}
+
+.scp {
+    float: right;
+    margin: 30px 30px;
+}
+
+.scp img {
+    width: 330px;
+    margin-top: 40px;
+}
+
+.safe {
+    background: #36c412;
+    /* margin: 10px; */
+    margin-top: 10px;
+    width: 60%;
+    color: #000;
+    padding: 15px 0px 15px 0px;
+    /* padding-left: 50px; */
+    font-size: 1.4em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.5em;
+    display: inline-block;
+    margin: 15px 0px 15px 0px;
+}
+
+.entrevista {
+    border: 1px dashed #9c9c9c;
+    background: #484f53;
+    /* color: #000; */
+    padding: 20px 20px;
+    width: 65%;
+    margin: 20px 20px;
+    margin: auto;
+}
+
+body {
+    background-image: url(../imagenes/cwm.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
