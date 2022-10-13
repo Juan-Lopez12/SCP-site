@@ -103,22 +103,45 @@ footer {
     width: 320px;
 }
 
-.xrays {
+/* .xray {
     float: left;
     margin: 20px 20px 20px 5px;
 }
 
-.xrays img {
+.xray img {
     border: 1px solid #9c9c9c;
     box-sizing: border-box;
     transition: 300ms all ease;
 }
 
-.xrays img:hover {
+.xray img:hover {
+    width: 657px;   
+} */
+
+/* div div p {
+    border: 1px solid #9c9c9c;
+    background: #1d1d1d;
+    text-align: center;
+    padding: 2px;
+    font-size: 0.9em;
+} */
+
+.xray {
+    float: left;
+    margin: 20px 20px 20px 5px;
+}
+
+.xray img {
+    border: 1px solid #9c9c9c;
+    box-sizing: border-box;
+    transition: 300ms all ease;
+}
+
+.xray img:hover {
     width: 657px;   
 }
 
-div div p {
+.xray__p {
     border: 1px solid #9c9c9c;
     background: #1d1d1d;
     text-align: center;
