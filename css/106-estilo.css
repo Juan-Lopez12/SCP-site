@@ -143,8 +143,7 @@ body {
     margin-top: 20px;
 }
 
-.scp__keter {
-    background: #ff0e0e;
+.scp__class {
     margin-top: 10px;
     margin-bottom: 40px;
     width: 60%;
@@ -152,6 +151,10 @@ body {
     padding: 15px 0px;
     font-size: 1.4em;
     text-align: center;
+}
+
+.scp__class--keter {
+    background: #ff0e0e;
     animation-name: animacion;
     animation-duration: 1s;
     animation-iteration-count: infinite;

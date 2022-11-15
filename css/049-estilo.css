@@ -154,8 +154,7 @@ body {
     width: 380px;
 }
 
-.scp__euclid {
-    background: #e2df27;
+.scp__class {
     margin-top: 10px;
     margin-bottom: 40px;
     width: 60%;
@@ -163,6 +162,10 @@ body {
     padding: 15px 0px;
     font-size: 1.4em;
     text-align: center;
+}
+
+.scp__class--euclid {
+    background: #e2df27;
 }
 
 .scp__p {

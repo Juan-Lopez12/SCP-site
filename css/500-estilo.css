@@ -1,67 +1,128 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+
+
+
+/*^ ----------------------------------- */
+/*^ -               GENERAL           - */
+/*^ ----------------------------------- */
+
 
 body {
     background: #000;
     color: #fff;
-    font-family: "helvetica";
+    font-family: "helvetica", sans-serif;
+    background-image: url(../imagenes/cwm.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
 }
 
-header, .main, footer {
+
+/*^ ----------------------------------- */
+/*^ -               GRID              - */
+/*^ ----------------------------------- */
+
+
+.container {
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header header header"
+    "wrapper wrapper wrapper"
+    "footer footer footer";
+    gap: 20px;
 }
 
-header nav {
+.header {
+    grid-area: header;
+}
+
+.wrapper {
+    grid-area: wrapper;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+/*^ ----------------------------------- */
+/*^ -              NAV                - */
+/*^ ----------------------------------- */
+
+
+.nav {
     background: #363636;
-    overflow: hidden;
-    clear: both;
 }
 
-header nav ul {
+.nav__ul {
     list-style: none;
+    display: flex;
+    padding: 0;
 }
 
-header nav ul li {
-    float: left;
+.nav__li {
+    flex-grow: 1;
 }
 
-header nav ul li a {
-    padding: 15px 20px;
+.nav__a {
+    padding: 15px 8px;
     display: block;
     color: #fff;
     text-decoration: none;
     font-size: 1.07em;
+    text-align: center;
 }
 
-header nav ul li a:hover {
+.nav__a:hover {
     background: #646464;
 }
 
-header nav ul li a span {
+.nav__a-span {
     color: red;
 }
 
-.main {
-    width: 70%;
+
+/*^ ----------------------------------- */
+/*^ -          LOGO E IDIOMA          - */
+/*^ ----------------------------------- */
+
+
+.container-logo {
+    display: flex;
 }
 
-.idioma ul {
+.logo__img {
+    width: 200px;
+}
+
+.logo__letra {
+    font-size: 3em;
+    margin-top: 0;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.logo__idioma {
+    margin-left: auto;
+}
+
+.logo__ul {
     text-decoration: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.idioma ul li {
+.logo__li {
     border: 1px solid #32680f;
     background: #255703;
     display: block;
-    float: right;
-    /* margin-top: 28px; */
 }
 
-.idioma ul li a {
+.logo__a {
     color: #fff;
     text-decoration: none;
     display: block;
@@ -69,72 +130,78 @@ header nav ul li a span {
     padding: 6px;
 }
 
-
-.idioma ul li a:hover {
+.logo__a:hover {
     background: #409608;
 }
 
-footer {
-    clear: both;
-    padding: 16px 0px;
-    text-align: center;
-    font-size: 1.2em;
-    background: #363636;
-}
 
-.logo {
-    float: left;
-    margin: 10px 10px;
-}
+/*^ ----------------------------------- */
+/*^ -            CONTENIDO            - */
+/*^ ----------------------------------- */
 
-.logo-letra {
-    font-size: 3em;
-    margin-top: 60px;
-    margin-left: 20px;
-    /* text-align: center; */
+
+.scp__h3 {
+    font-size: 2.5em;
     display: inline-block;
+    margin: 15px 0px;
 }
 
-.scp {
+.scp__image {
     float: right;
-    margin: 30px 30px;
+    margin-top: 20px;
 }
 
-.scp img {
-    width: 330px;
-    margin-top: 40px;
+.scp__img {
+    width: 300px;
 }
 
-.safe {
-    background: #36c412;
-    /* margin: 10px; */
+.scp__class {
     margin-top: 10px;
+    margin-bottom: 40px;
     width: 60%;
     color: #000;
-    padding: 15px 0px 15px 0px;
-    /* padding-left: 50px; */
+    padding: 15px 0px;
     font-size: 1.4em;
     text-align: center;
 }
 
-h3 {
-    font-size: 2.5em;
-    display: inline-block;
-    margin: 15px 0px 15px 0px;
+.scp__class--safe {
+    background: #36c412;
 }
+
+.scp__p {
+    margin: 0;
+}
+
+
+/*^ ----------------------------------- */
+/*^ -          ENTREVISTA/LOGS        - */
+/*^ ----------------------------------- */
+
 
 .entrevista {
     border: 1px dashed #9c9c9c;
     background: #484f53;
-    /* color: #000; */
     padding: 20px 20px;
     width: 65%;
-    margin: 20px 20px;
-    margin: auto;
+    margin: 20px auto;
 }
 
-body {
-    background-image: url(../imagenes/cwm.jpg);
-    background-repeat: no-repeat;
-    background-position: left bottom;
+.entrevista--log {
+    border: 1px solid #9c9c9c;
+}
+
+
+/*^ ----------------------------------- */
+/*^ -               FOOTER            - */
+/*^ ----------------------------------- */
+
+
+.footer {
+    margin-top: 100px;
+    padding: 0px 0px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 0.8em;
+    background: #363636;
 }

@@ -135,7 +135,6 @@ body {
     background: url(../imagenes/loadingback.jpg);
     background-repeat: no-repeat;
     background-position-y: bottom;
-    /* z-index: 100; */
 }
 
 .scp__h3 {
@@ -149,8 +148,7 @@ body {
     margin-top: 20px;
 }
 
-.scp__euclid {
-    background: #e2df27;
+.scp__class {
     margin-top: 10px;
     margin-bottom: 40px;
     width: 60%;
@@ -158,6 +156,10 @@ body {
     padding: 15px 0px;
     font-size: 1.4em;
     text-align: center;
+}
+
+.scp__class--euclid {
+    background: #e2df27;
 }
 
 .scp__p {
