@@ -16,7 +16,7 @@ body {
 body {
     background: #000;
     color: #fff;
-    font-family: "helvetica", sans-serif;
+    font-family: "verdana", "helvetica", sans-serif;
     background-image: url(../imagenes/682.jpg);
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -146,7 +146,7 @@ body {
 .scp {
     width: 732px;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .scp__h3 {
