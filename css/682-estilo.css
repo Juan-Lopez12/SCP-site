@@ -1,67 +1,131 @@
-* {
-    margin: 0;
-    padding: 0;
+
+
+body {
+    background-image: url(../imagenes/682.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
+
+
+
+/*^ ----------------------------------- */
+/*^ -               GENERAL           - */
+/*^ ----------------------------------- */
+
 
 body {
     background: #000;
     color: #fff;
-    font-family: "helvetica";
+    font-family: "helvetica", sans-serif;
+    background-image: url(../imagenes/682.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
-header, .main, footer {
+
+/*^ ----------------------------------- */
+/*^ -               GRID              - */
+/*^ ----------------------------------- */
+
+
+.container {
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header header header"
+    "wrapper wrapper wrapper"
+    "footer footer footer";
+    gap: 20px;
 }
 
-header nav {
+.header {
+    grid-area: header;
+}
+
+.wrapper {
+    grid-area: wrapper;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+/*^ ----------------------------------- */
+/*^ -              NAV                - */
+/*^ ----------------------------------- */
+
+
+.nav {
     background: #363636;
-    overflow: hidden;
-    clear: both;
 }
 
-header nav ul {
+.nav__ul {
     list-style: none;
+    display: flex;
+    padding: 0;
 }
 
-header nav ul li {
-    float: left;
+.nav__li {
+    flex-grow: 1;
 }
 
-header nav ul li a {
-    padding: 15px 20px;
+.nav__a {
+    padding: 15px 8px;
     display: block;
     color: #fff;
     text-decoration: none;
     font-size: 1.07em;
+    text-align: center;
 }
 
-header nav ul li a:hover {
+.nav__a:hover {
     background: #646464;
 }
 
-header nav ul li a span {
+.nav__a-span {
     color: red;
 }
 
-.main {
-    width: 70%;
+
+/*^ ----------------------------------- */
+/*^ -          LOGO E IDIOMA          - */
+/*^ ----------------------------------- */
+
+
+.container-logo {
+    display: flex;
 }
 
-.idioma ul {
+.logo__letra {
+    font-size: 3em;
+    margin-top: 0;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.logo__idioma {
+    margin-left: auto;
+}
+
+.logo__ul {
     text-decoration: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.idioma ul li {
+.logo__li {
     border: 1px solid #32680f;
     background: #255703;
     display: block;
-    float: right;
-    /* margin-top: 28px; */
 }
 
-.idioma ul li a {
+.logo__a {
     color: #fff;
     text-decoration: none;
     display: block;
@@ -69,91 +133,124 @@ header nav ul li a span {
     padding: 6px;
 }
 
-
-.idioma ul li a:hover {
+.logo__a:hover {
     background: #409608;
 }
 
-footer {
-    clear: both;
-    padding: 16px 0px;
-    text-align: center;
-    font-size: 1.2em;
-    background: #363636;
-}
 
-.logo {
-    float: left;
-    margin: 10px 10px;
-}
+/*^ ----------------------------------- */
+/*^ -            CONTENIDO            - */
+/*^ ----------------------------------- */
 
-.logo-letra {
-    font-size: 3em;
-    margin-top: 60px;
-    margin-left: 20px;
-    /* text-align: center; */
-    display: inline-block;
-}
 
 .scp {
+    width: 732px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.scp__h3 {
+    font-size: 2.5em;
+    display: inline-block;
+    margin: 15px 0px;
+}
+
+.scp__image {
     float: right;
-    margin: 25px 25px;
+    margin-top: 20px;
+    margin: 15px;
 }
 
-.scp img {
-    width: 460px;
-    border: 1px solid #9c9c9c;
-    box-sizing: border-box;
+.scp__img {
+    width: 400px;
 }
 
-.scp p {
-    border: 1px solid #9c9c9c;
-    background: #1d1d1d;
-    text-align: center;
-    padding: 8px 15px;
-    font-size: 0.9em;
-    width: 460px;
-    box-sizing: border-box;
-    font-size: 0.8em;
-}
-
-.keter {
-    background: #d30d0d;
-    /* margin: 10px; */
+.scp__class {
     margin-top: 10px;
+    margin-bottom: 40px;
     width: 60%;
     color: #000;
-    padding: 15px 0px 15px 0px;
-    /* padding-left: 50px; */
+    padding: 15px 0px;
     font-size: 1.4em;
     text-align: center;
 }
 
-h3 {
-    font-size: 2.5em;
-    display: inline-block;
-    margin: 15px 0px 15px 0px;
+.scp__class--keter {
+    background: #ff0e0e;
+    animation-name: animacion;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in;
 }
+
+@keyframes animacion {
+    0% {
+        background: #ff0e0e;
+    }
+
+    100% {
+        background: #7e0000;
+    }
+}
+
+.scp__p {
+    margin: 0;
+}
+
+.image-notes--right {
+    float: right;
+}
+
+.image-notes--682 {
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.image-notes__p {
+    border: 1px solid #9c9c9c;
+    background: #1d1d1d;
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+    font-size: 0.9em;
+}
+
+.raya {
+    margin: 1em 2em;
+}
+
+
+/*^ ----------------------------------- */
+/*^ -          ENTREVISTA/LOGS        - */
+/*^ ----------------------------------- */
+
 
 .entrevista {
     border: 1px dashed #9c9c9c;
     background: #484f53;
-    /* color: #000; */
     padding: 20px 20px;
-    width: 65%;
-    margin: 20px 20px;
-    margin: auto;
+    width: 600px;
+    margin: 20px auto;
+    box-sizing: border-box;
 }
 
-.raya {
-    width: 75%;
+.entrevista--log {
+    border: 1px solid #9c9c9c;
+}
+
+
+/*^ ----------------------------------- */
+/*^ -               FOOTER            - */
+/*^ ----------------------------------- */
+
+
+.footer {
+    margin-top: 100px;
+    padding: 0px 0px;
     text-align: center;
-    margin-left: 12.5%;
-    display: block;
+    font-size: 1.2em;
+    line-height: 0.8em;
+    background: #363636;
 }
 
-body {
-    background-image: url(../imagenes/682.jpg);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-}
