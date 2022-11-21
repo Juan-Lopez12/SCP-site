@@ -1,6 +1,6 @@
 const typed = new Typed(".typed", {
     strings: [
-        "a", '<b class="warning creepy__font-family"><i>YOU WILL DIE</b></i>',
+        "a", '<b class="warning creepy-font-family">YOU WILL DIE</b>',
         
 ],
     // stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
