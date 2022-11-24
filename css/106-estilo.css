@@ -90,6 +90,10 @@ body {
     display: flex;
 }
 
+.logo__img {
+    width: 200px;
+}
+
 .logo__letra {
     font-size: 3em;
     margin-top: 0;
@@ -141,6 +145,10 @@ body {
 .scp__image {
     float: right;
     margin-top: 20px;
+}
+
+.scp__img {
+    width: 350px;
 }
 
 .scp__class {

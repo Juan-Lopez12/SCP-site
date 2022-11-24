@@ -157,6 +157,10 @@ body {
     margin-top: 20px;
 }
 
+.scp__img {
+    width: 240px;
+}
+
 .scp__class {
     margin-top: 10px;
     margin-bottom: 40px;
