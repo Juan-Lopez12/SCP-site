@@ -179,8 +179,51 @@ body {
 	text-align: center;
 }
 
+.scp__h3, .scp__p, .scp__class--euclid, .logo__letra, .footer {
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in;
+}
+
+.logo__letra, .footer {
+    animation-name: white-glow;
+    animation-duration: 1s;
+}
+
+.scp__h3 {
+    animation-name: white-glow;
+    animation-duration: 1.5s;
+}
+
+@keyframes white-glow {
+    0% { text-shadow: 0 0 3px #ffffff; }
+    100% { text-shadow: 0 0 14px #ffffff; }
+}
+
+.scp__p {
+    animation-name: black-glow;
+    animation-duration: 1s;
+}
+
+@keyframes black-glow {
+    0% { text-shadow: 0 0 4px #000; }
+    100% { text-shadow: 0 0 10px #000; }
+}
+
 .scp__class--euclid {
-	background: #e2df27;
+    background: #e6e200;
+    animation-name: animacion;
+    animation-duration: 1s;
+}
+
+@keyframes animacion {
+    0% {
+        background: #e6e200;
+    }
+
+    100% {
+        background: #585700;
+    }
 }
 
 .scp__p {
