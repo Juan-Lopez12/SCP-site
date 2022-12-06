@@ -6,72 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCP Foundation</title>
     <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="normalize/normalize.css">
     <link rel="stylesheet" href="css/index-estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <header>
-        <div class="logo">
-            <img src="imagenes/mtf.jpg" width="200" alt="MTF">
-        </div>
-        <div class="idioma">
-            <ul>
-                <li><a href="ES-scp/es-index.html">ESPAÑOL</a></li>
-                <li><a href="index.html">ENGLISH</a></li>
-            </ul>
-        </div>
-        <div class="logo-letra">
-            <h2>SCP Foundation</h2>
-        </div>
+    <div class="container">
+        <header class="header">
+            <div class="container-logo">
+                <div class="logo__image">
+                    <img src="imagenes/mtf.jpg" width="200" alt="MTF">
+                </div>
+                <div class="logo__letra">
+                    <h2>SCP Foundation</h2>
+                </div>
+                <div class="logo__idioma">
+                    <ul class="logo__ul" >
+                        <li class="logo__li">
+                            <a class="logo__a" href="ES-scp/es-index.html">ESPAÑOL</a>
+                        </li>
+                        <li class="logo__li">
+                            <a class="logo__a" href="index.html">ENGLISH</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
+            <!-- <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="scp-049.html">SCP-049</a></li>
+                    <li><a href="GO-AWAY.html"><b><i><span class="creepy__font-family">YOU WILL DIE</span></i></b></a></li>
+                    <li><a href="scp-096.html">SCP-096</a></li>
+                    <li><a href="scp-106.html">SCP-106</a></li>
+                    <li><a href="scp-173.html">SCP-173</a></li>
+                    <li><a href="scp-500.html">SCP-500</a></li>
+                    <li><a href="scp-682.html">SCP-682</a></li>
+                    <li><a href="">LOGIN</a></li>
+                </ul>
+            </nav> -->
 
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="scp-049.html">SCP-049</a></li>
-                <li><a href="GO-AWAY.html"><b><i><span class="creepy__font-family">YOU WILL DIE</span></i></b></a></li>
-                <li><a href="scp-096.html">SCP-096</a></li>
-                <li><a href="scp-106.html">SCP-106</a></li>
-                <li><a href="scp-173.html">SCP-173</a></li>
-                <li><a href="scp-500.html">SCP-500</a></li>
-                <li><a href="scp-682.html">SCP-682</a></li>
-                <li><a href="">LOGIN</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="wrapper">
-        <section class="main">
-            <article class="main-1">
-                <p>
-                    <div class="aviso">
-                        WARNING: THE FOUNDATION DATABASE IS
-                    </div>
-
-                    <div class="clasificada">
-                        <b>CLASSIFIED</b>
-                    </div>
-                    
-                    <div class="aviso">
-                        ACCESS BY UNAUTHORIZED PERSONNEL IS STRICTLY PROHIBITED
-                        PERPETRATORS WILL BE TRACKED, LOCATED, AND DETAINED
-                    </div>
-                </p>
-            </article>
-            <article class="main-2">
-                <p>
-                    <b>WARNING:</b> THE <span class="yeah"><b><i>jail</i></b></span> SITE HAS BEEN ████████ BY <span><b><i>God</i></b></span> SCP-079 AND ALL THE <span><b><i>creations</i></b></span> SCP's  HAD <span><b><i>been unleashed to kill you all</i></b></span> BREACH THE CONTAINMENT <span><b><i>do not look back</i></b></span>. ALL THE PERSONNEL <span><b><i> run away now</i></b></span> EVACUATE THE FACILITY AS SOON AS POSSIBLE. <span><b><i>run for your life</i></b></span>
-                </p>
-            </article>
+            <nav class="nav">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a class="nav__a nav__a--light" href="index.html">HOME</a></li>
+                    <li class="nav__li"><a class="nav__a nav__a--euclid" href="scp-049.html">SCP-049</a></li>
+                    <li class="nav__li"><a class="nav__a nav__a--death" href="GO-AWAY.html"><span class="nav__a-span">SCP-0██</span></a></li>
+                    <li class="nav__li"><a class="nav__a nav__a--euclid" href="scp-096.html">SCP-096</a></li>
+                    <li class="nav__li"><a class="nav__a nav__a--keter" href="scp-106.html">SCP-106</a></li>
+                    <li class="nav__li"><a class="nav__a nav__a--euclid" href="scp-173.html">SCP-173</a></li>
+                    <li class="nav__li"><a class="nav__a nav__a--safe" href="scp-500.html">SCP-500</a></li>
+                    <li class="nav__li"><a class="nav__a nav__a--keter" href="scp-682.html">SCP-682</a></li>
+                    <li class="nav__li"><a class="nav__a nav__a--light" href="">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="wrapper">
+            <section class="main">
+                <article class="main-1 white-glow">
+                    <p>
+                        <div class="aviso">
+                            WARNING: THE FOUNDATION DATABASE IS
+                        </div>
+                        <div class="clasificada aviso">
+                            <b>CLASSIFIED</b>
+                        </div>
+        
+                        <div class="aviso">
+                            ACCESS BY UNAUTHORIZED PERSONNEL IS STRICTLY PROHIBITED
+                            PERPETRATORS WILL BE TRACKED, LOCATED, AND DETAINED
+                        </div>
+                    </p>
+                </article>
+                <article class="main-2">
+                    <p class="">
+                        <span class="white-glow"><b>WARNING:</b> THE </span><span class="shake-1">j</span><span class="shake-2">a</span><span class="shake-1">i</span><span class="shake-2">l</span> <span class="white-glow">SITE HAS BEEN ████████ BY </span><span class="shake-1">G</span><span class="shake-2">o</span><span class="shake-1">d</span> <span class="white-glow">SCP-079 AND ALL THE </span><span class="shake-1">c</span><span class="shake-2">r</span><span class="shake-1">e</span><span class="shake-2">a</span><span class="shake-1">t</span><span class="shake-2">i</span><span class="shake-1">o</span><span class="shake-2">n</span><span class="shake-1">s</span><span class="white-glow"> SCP's  HAD </span><span class="shake-1">b</span><span class="shake-2">e</span><span class="shake-1">e</span><span class="shake-2">n</span> <span class="shake-1">u</span><span class="shake-2">n</span><span class="shake-1">l</span><span class="shake-2">e</span><span class="shake-1">a</span><span class="shake-2">s</span><span class="shake-1">h</span><span class="shake-2">e</span><span class="shake-1">d</span> <span class="shake-2">t</span><span class="shake-1">o</span> <span class="shake-2">k</span><span class="shake-1">i</span><span class="shake-2">l</span><span class="shake-1">l</span> <span class="shake-2">y</span><span class="shake-1">o</span><span class="shake-2">u</span> <span class="shake-1">a</span><span class="shake-2">l</span><span class="shake-1">l</span><span class="white-glow"> BREACH THE CONTAINMENT </span><span class="shake-1">d</span><span class="shake-2">o</span> <span class="shake-1">n</span><span class="shake-2">o</span><span class="shake-1">t</span> <span class="shake-2">l</span><span class="shake-1">o</span><span class="shake-2">o</span><span class="shake-1">k</span> <span class="shake-2">b</span><span class="shake-1">a</span><span class="shake-2">c</span><span class="shake-1">k</span><span class="white-glow">. ALL THE PERSONNEL </span><span class="shake-1">r</span><span class="shake-2">u</span><span class="shake-1">n</span> <span class="shake-2">a</span><span class="shake-1">w</span><span class="shake-2">a</span><span class="shake-1">y</span> <span class="shake-2">n</span><span class="shake-1">o</span><span class="shake-2">w</span><span class="white-glow"> EVACUATE THE FACILITY AS SOON AS POSSIBLE. </span><span class="shake-1">r</span><span class="shake-2">u</span><span class="shake-1">n</span> <span class="shake-2">f</span><span class="shake-1">o</span><span class="shake-2">r</span> <span class="shake-1">y</span><span class="shake-2">o</span><span class="shake-1">u</span><span class="shake-2">r</span> <span class="shake-1">l</span><span class="shake-2">i</span><span class="shake-1">f</span><span class="shake-2">e</span>
+                    </p>
+                </article>
+            </section>
         </section>
-    </section>
-
-    <footer>
-        <p>SCP - SECURE, CONTAIN, PROTECT</p>
-    </footer>
-
-
+        <footer class="footer">
+            <p>SCP - SECURE, CONTAIN, PROTECT</p>
+        </footer>
+    </div>
 
 </body>
 </html>

@@ -1,384 +1,331 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+
+/*^ ----------------------------------- */
+/*^ -               GENERAL           - */
+/*^ ----------------------------------- */
+
 
 body {
-    background: #000;
-    color: #fff;
-    font-family: "helvetica", sans-serif;
-}
-
-header, .main, footer {
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-}
-
-header nav {
-    background: #363636;
-    overflow: hidden;
-    clear: both;
-}
-
-header nav ul {
-    list-style: none;
-}
-
-header nav ul li {
-    float: left;
-}
-
-header nav ul li a {
-    padding: 15px 20px;
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.07em;
-    transition: all .3s;
-}
-
-header nav ul li a:hover {
-    background: #ff0000;
-    filter: drop-shadow(0px 0px 25px red);
-    padding: 30px 20px;
-}
-
-header nav ul li a span {
-    color: red;
-}
-
-.idioma ul {
-    text-decoration: none;
-}
-
-.idioma ul li {
-    border: 1px solid #32680f;
-    background: #255703;
-    display: block;
-    float: right;
-    /* margin-top: 28px; */
-}
-
-.idioma ul li a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    font-size: 0.72em;
-    padding: 6px;
-    transition: all .3s;
+  background: #000;
+  color: #fff;
+  font-family: "helvetica", sans-serif;
 }
 
 
-.idioma ul li a:hover {
-    background: #409608;
+/*^ ----------------------------------- */
+/*^ -               GRID              - */
+/*^ ----------------------------------- */
+
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+  "header header header"
+  "wrapper wrapper wrapper"
+  "footer footer footer";
+  gap: 20px;
 }
 
-footer {
-    clear: both;
-    margin-top: 50px;
-    padding: 16px 0px;
-    text-align: center;
-    font-size: 1.2em;
-    background: #363636;
+.header {
+  grid-area: header;
 }
 
-.logo {
-    float: left;
-    margin: 10px 10px;
+.wrapper {
+  grid-area: wrapper;
 }
 
-.logo-letra {
-    font-size: 3em;
-    margin-top: 60px;
-    margin-left: 20px;
-    /* text-align: center; */
-    display: inline-block;
+.footer {
+  grid-area: footer;
+}
+
+
+/*^ ----------------------------------- */
+/*^ -              NAV                - */
+/*^ ----------------------------------- */
+
+
+.nav {
+  background: #363636;
+}
+
+.nav__ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+
+}
+
+.nav__li {
+  flex-grow: 1;
+}
+
+.nav__a {
+  padding: 15px 8px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.07em;
+  text-align: center;
+}
+
+.nav__a {
+  transition: padding .3s, font-size .3s, font-weight .3s, text-shadow .3s;
+}
+
+.nav__a:hover {
+  background: #646464;
+  padding: 15px 35px;
+  font-weight: bold;
+  font-size: 24.12px;
+  text-shadow: 0 0 15px #ffffff;
+}
+
+.nav__a--light:hover {
+  filter: drop-shadow(0px 0px 15px #292929);
+  text-shadow: 0 0 15px #ffffff;
+}
+
+.nav__a--safe:hover {
+  background: #28ca00;
+  filter: drop-shadow(0px 0px 15px #187a00);
+}
+
+.nav__a--euclid:hover {
+  background: #e6e200;
+  filter: drop-shadow(0px 0px 15px #969300);
+}
+
+.nav__a--keter:hover {
+  background: #ff0000;
+  filter: drop-shadow(0px 0px 15px #ff0000);
+}
+
+.nav__a--death:hover {
+  background: #000000;
+  filter: drop-shadow(0px 0px 15px #000000);
+  color: #ff0000;
+  text-shadow: 0 0 15px #ff0000;
+}
+
+.white-glow {
+  animation-name: white-glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in;
+}
+
+@keyframes white-glow {
+  0% { text-shadow: 0 0 4px #ffffff; }
+  100% { text-shadow: 0 0 14px #ffffff; }
+}
+
+
+/*^ ----------------------------------- */
+/*^ -          LOGO E IDIOMA          - */
+/*^ ----------------------------------- */
+
+
+.container-logo {
+  display: flex;
+}
+
+.logo__letra {
+  font-size: 3em;
+  margin-top: 0;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.logo__idioma {
+  margin-left: auto;
+}
+
+.logo__ul {
+  text-decoration: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.logo__li {
+  border: 1px solid #32680f;
+  background: #255703;
+  display: block;
+}
+
+.logo__a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 0.72em;
+  padding: 6px;
+}
+
+.logo__a:hover {
+  background: #409608;
+}
+
+
+/*^ ----------------------------------- */
+/*^ -            CONTENIDO            - */
+/*^ ----------------------------------- */
+
+.logo__letra, .footer {
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+  animation-name: white-glow;
+  animation-duration: 1s;
+}
+
+@keyframes white-glow {
+  0% { text-shadow: 0 0 3px #ffffff; }
+  100% { text-shadow: 0 0 14px #ffffff; }
 }
 
 .main-1 {
-    font-size: 2em;
-    margin: 60px 40px 60px 40px;
-    border: 2px solid #9c9c9c;
-    background: #484f53;
-    /* color: #000; */
-    padding: 20px 20px;
-    /* width: 65%; */
-    /* margin: 20px 20px; */
-    /* margin: auto; */
+  font-size: 2em;
+  margin: 60px 40px 60px 40px;
+  border: 2px solid #9c9c9c;
+  background: #484f53;
+  padding: 20px 20px;
 }
 
 .main-2 {
-    font-size: 2.3em;
-    margin: 40px;
-    border: 5px solid #ff0000;
-    background: #961010;
-    color: #dddddd;
-    padding: 20px 20px;
-    /* width: 65%; */
-    /* margin: 20px 20px; */
-    /* margin: auto; */
-    /* font-family: 'Amatic SC'; */
-}
-
-.main-2 span {
-    text-decoration: line-through;
-    color: #000;
+  font-size: 2.3em;
+  margin: 40px;
+  border: 5px solid #ff0000;
+  background: #961010;
+  color: #dddddd;
+  padding: 20px 20px;
 }
 
 .clasificada {
-    text-align: center;
-    font-size: 3.5em;
+  font-size: 3.5em;
 }
 
 .aviso {
-    text-align: center;
+  text-align: center;
 }
 
-.creepy__font-family {
-    font-family: "Amatic SC";
-    line-height: .001em;
-    font-size: 2.47em;
-    display: inline-block;
-    padding-top: 6px;
-    letter-spacing: 2px;
-    font-weight: 100;
-    /* outline: 10px solid red; */
-    animation-name: shake;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-.main-2 span b i {
-    font-family: 'Amatic SC', "helvetica";
-    font-size: 1.1;
-}
+/* .creepy__font-family {
+  font-family: "Amatic SC";
+  line-height: .001em;
+  font-size: 2.47em;
+  display: inline-block;
+  padding-top: 6px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  animation-name: shake;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+} */
 
 .main-2 {
-    animation-name: animacion;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-timing-function: ease-in;
+  animation-name: animacion;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in;
+  border-radius: 5px;
 }
 
 @keyframes animacion {
-    0% {
-        border-color: #ff0000;
-    }
+  0% {
+      border-color: #ff0000;
+      filter: drop-shadow(0px 0px 10px #ff0000);
+  }
 
-    100% {
-        border-color: #880000;
-    }
+  100% {
+      border-color: #880000;
+      filter: drop-shadow(0px 0px 10px #880000);
+  }
 }
 
-.main-2 span {
-    animation: .5s shake infinite alternate;
-    display: inline-block;
-    animation-name: shake;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+.nav__a-span {
+  animation: .5s shake infinite alternate;
+  display: inline-block;
 }
 
 @keyframes shake {
-    0% { transform: skewX(-15deg); }
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+
+
+.shake-1, .shake-2 {
+  display: inline-block;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  font-family: 'Amatic SC', "helvetica";
+  font-size: 1.1;
+  color: #000;
+  text-decoration: line-through black 1px;
+  }
+  
+  .shake-1 {
+    animation-name: shake-1;
+  }
+  
+  @keyframes shake-1 {
+  0% { transform: translate(1px, 1px) rotate(0deg) skewX(-15deg);  }
+  5% { transform: skewX(15deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg) skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg) skewX(0deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg) skewX(0deg);   }
+  }
+  
+  .shake-2 {
+    animation-name: shake-2;
+  }
+  
+  @keyframes shake-2 {
+    0% { transform: translate(1px, -2px) rotate(-1deg) skewX(-15deg); }
     5% { transform: skewX(15deg); }
-    10% { transform: skewX(-15deg); }
+    10% { transform: translate(1px, 2px) rotate(0deg) skewX(-15deg); }
     15% { transform: skewX(15deg); }
-    20% { transform: skewX(0deg); }
-    100% { transform: skewX(0deg); }  
-}
-
-
-
-
-
-
-
-/*^^ ENTIRE SHAKING WORDS */
-
-/* .main-2 span {
-display: inline-block;
-animation-name: shake;
-animation-duration: .5s;
-animation-iteration-count: infinite;
-animation-direction: alternate;
-}
-
-@keyframes shake {
-0% { transform: translate(1px, 1px) rotate(0deg); }
-10% { transform: translate(-1px, -2px) rotate(-1deg); }
-20% { transform: translate(-3px, 0px) rotate(1deg); }
-30% { transform: translate(3px, 2px) rotate(0deg); }
-40% { transform: translate(1px, -1px) rotate(1deg); }
-50% { transform: translate(-1px, 2px) rotate(-1deg); }
-60% { transform: translate(-3px, 1px) rotate(0deg); }
-70% { transform: translate(3px, 1px) rotate(-1deg); }
-80% { transform: translate(-1px, -1px) rotate(1deg); }
-90% { transform: translate(1px, 2px) rotate(0deg); }
-100% { transform: translate(1px, -2px) rotate(-1deg); }
-} */
-
-
-
-        /*^^ SHAKING LETTERS */
-
-/* .main-2 span {
-        animation: shake-vertical 500ms ease-in-out infinite;
+    20% { transform: translate(-1px, -1px) rotate(1deg) skewX(0deg); }
+    30% { transform: translate(3px, 1px) rotate(-1deg); }
+    40% { transform: translate(-3px, 1px) rotate(0deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(1px, -1px) rotate(1deg); }
+    70% { transform: translate(3px, 2px) rotate(0deg); }
+    80% { transform: translate(-3px, 0px) rotate(1deg); }
+    90% { transform: translate(-1px, -2px) rotate(-1deg); }
+    100% { transform: translate(1px, 1px) rotate(0deg) skewX(0deg); }
     }
+
     
-@keyframes shake-vertical {
-    2% {
-      transform: translate(6px, 6px) rotate(0);
-    }
-    4% {
-      transform: translate(-1px, -1px) rotate(0);
-    }
-    6% {
-      transform: translate(-7px, -7px) rotate(0);
-    }
-    8% {
-      transform: translate(-1px, -1px) rotate(0);
-    }
-    10% {
-      transform: translate(9px, 9px) rotate(0);
-    }
-    12% {
-      transform: translate(1px, 1px) rotate(0);
-    }
-    14% {
-      transform: translate(3px, 3px) rotate(0);
-    }
-    16% {
-      transform: translate(6px, 6px) rotate(0);
-    }
-    18% {
-      transform: translate(0px, 0px) rotate(0);
-    }
-    20% {
-      transform: translate(2px, 2px) rotate(0);
-    }
-    22% {
-      transform: translate(1px, 1px) rotate(0);
-    }
-    24% {
-      transform: translate(3px, 3px) rotate(0);
-    }
-    26% {
-      transform: translate(4px, 4px) rotate(0);
-    }
-    28% {
-      transform: translate(0px, 0px) rotate(0);
-    }
-    30% {
-      transform: translate(-8px, -8px) rotate(0);
-    }
-    32% {
-      transform: translate(6px, 6px) rotate(0);
-    }
-    34% {
-      transform: translate(6px, 6px) rotate(0);
-    }
-    36% {
-      transform: translate(-4px, -4px) rotate(0);
-    }
-    38% {
-      transform: translate(2px, 2px) rotate(0);
-    }
-    40% {
-      transform: translate(-8px, -8px) rotate(0);
-    }
-    42% {
-      transform: translate(-9px, -9px) rotate(0);
-    }
-    44% {
-      transform: translate(-3px, -3px) rotate(0);
-    }
-    46% {
-      transform: translate(0px, 0px) rotate(0);
-    }
-    48% {
-      transform: translate(-7px, -7px) rotate(0);
-    }
-    50% {
-      transform: translate(0px, 0px) rotate(0);
-    }
-    52% {
-      transform: translate(3px, 3px) rotate(0);
-    }
-    54% {
-      transform: translate(-4px, -4px) rotate(0);
-    }
-    56% {
-      transform: translate(3px, 3px) rotate(0);
-    }
-    58% {
-      transform: translate(-9px, -9px) rotate(0);
-    }
-    60% {
-      transform: translate(9px, 9px) rotate(0);
-    }
-    62% {
-      transform: translate(-6px, -6px) rotate(0);
-    }
-    64% {
-      transform: translate(0px, 0px) rotate(0);
-    }
-    66% {
-      transform: translate(-4px, -4px) rotate(0);
-    }
-    68% {
-      transform: translate(1px, 1px) rotate(0);
-    }
-    70% {
-      transform: translate(5px, 5px) rotate(0);
-    }
-    72% {
-      transform: translate(0px, 0px) rotate(0);
-    }
-    74% {
-      transform: translate(-6px, -6px) rotate(0);
-    }
-    76% {
-      transform: translate(-3px, -3px) rotate(0);
-    }
-    78% {
-      transform: translate(3px, 3px) rotate(0);
-    }
-    80% {
-      transform: translate(6px, 6px) rotate(0);
-    }
-    82% {
-      transform: translate(2px, 2px) rotate(0);
-    }
-    84% {
-      transform: translate(-3px, -3px) rotate(0);
-    }
-    86% {
-      transform: translate(1px, 1px) rotate(0);
-    }
-    88% {
-      transform: translate(1px, 1px) rotate(0);
-    }
-    90% {
-      transform: translate(10px, 10px) rotate(0);
-    }
-    92% {
-      transform: translate(-2px, -2px) rotate(0);
-    }
-    94% {
-      transform: translate(-2px, -2px) rotate(0);
-    }
-    96% {
-      transform: translate(-6px, -6px) rotate(0);
-    }
-    98% {
-      transform: translate(-9px, -9px) rotate(0);
-    }
-    0%,
-    100% {
-      transform: translate(0, 0) rotate(0);
-    }
-  } */
+/*^ ----------------------------------- */
+/*^ -               FOOTER            - */
+/*^ ----------------------------------- */
+
+
+.footer {
+  margin-top: 100px;
+  padding: 0px 0px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 0.8em;
+  background: #363636;
+}
+

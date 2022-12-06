@@ -75,8 +75,43 @@ body {
     text-align: center;
 }
 
+.nav__a {
+	transition: padding 0.3s, font-size 0.3s, font-weight 0.3s, text-shadow 0.3s;
+}
+
 .nav__a:hover {
-    background: #646464;
+	background: #646464;
+	padding: 15px 35px;
+	font-weight: bold;
+	font-size: 24.12px;
+	text-shadow: 0 0 15px #ffffff;
+}
+
+.nav__a--light:hover {
+	filter: drop-shadow(0px 0px 15px #292929);
+	text-shadow: 0 0 15px #ffffff;
+}
+
+.nav__a--safe:hover {
+	background: #28ca00;
+	filter: drop-shadow(0px 0px 15px #187a00);
+}
+
+.nav__a--euclid:hover {
+	background: #e6e200;
+	filter: drop-shadow(0px 0px 15px #969300);
+}
+
+.nav__a--keter:hover {
+	background: #ff0000;
+	filter: drop-shadow(0px 0px 15px #ff0000);
+}
+
+.nav__a--death:hover {
+	background: #000000;
+	filter: drop-shadow(0px 0px 15px #000000);
+	color: #ff0000;
+	text-shadow: 0 0 15px #ff0000;
 }
 
 .nav__a-span {
@@ -92,6 +127,16 @@ body {
     letter-spacing: 2px;
     font-weight: 500;
     color: red;
+    animation: .5s shake infinite alternate;
+}
+
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
 }
 
 
@@ -171,18 +216,46 @@ body {
     text-align: center;
 }
 
-.scp__class--euclid {
-    background: #e2df27;
-    animation-name: animacion;
-    animation-duration: 1s;
+.scp__h3, .scp__p, .scp__class--euclid, .logo__letra, .footer {
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-timing-function: ease-in;
 }
 
+.logo__letra, .footer {
+    animation-name: white-glow;
+    animation-duration: 1s;
+}
+
+.scp__h3 {
+    animation-name: white-glow;
+    animation-duration: 1.5s;
+}
+
+@keyframes white-glow {
+    0% { text-shadow: 0 0 3px #ffffff; }
+    100% { text-shadow: 0 0 14px #ffffff; }
+}
+
+.scp__p {
+    animation-name: black-glow;
+    animation-duration: 1s;
+}
+
+@keyframes black-glow {
+    0% { text-shadow: 0 0 4px #000; }
+    100% { text-shadow: 0 0 10px #000; }
+}
+
+.scp__class--euclid {
+    background: #e6e200;
+    animation-name: animacion;
+    animation-duration: 1s;
+}
+
 @keyframes animacion {
     0% {
-        background: #e2df27;
+        background: #e6e200;
     }
 
     100% {
