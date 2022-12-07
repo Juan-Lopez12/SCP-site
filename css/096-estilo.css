@@ -8,7 +8,7 @@
 body {
     background: #000;
     color: #fff;
-    font-family: "helvetica", sans-serif;
+    font-family: "verdana", "helvetica", sans-serif;
     background-image: url(../imagenes/foundationlogo.jpg);
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -21,9 +21,9 @@ body {
 
 
 .container {
-    width: 90%;
+    /* width: 90%;
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 20px auto; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -44,6 +44,14 @@ body {
 
 .footer {
     grid-area: footer;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.container-logo, .nav__ul {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
 }
 
 
@@ -191,6 +199,12 @@ body {
 /*^ ----------------------------------- */
 
 
+.scp {
+    width: 732px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
 .scp__h3 {
     font-size: 2.5em;
     display: inline-block;
@@ -199,7 +213,7 @@ body {
 
 .scp__image {
     float: right;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .scp__img {
@@ -207,12 +221,13 @@ body {
 }
 
 .scp__class {
+    font-family: "helvetica";
     margin-top: 10px;
     margin-bottom: 40px;
-    width: 60%;
+    width: 80%;
     color: #000;
     padding: 15px 0px;
-    font-size: 1.4em;
+    font-size: 22.4px;
     text-align: center;
 }
 
@@ -285,8 +300,9 @@ body {
     border: 1px dashed #9c9c9c;
     background: #484f53;
     padding: 20px 20px;
-    width: 65%;
+    width: 600px;
     margin: 20px auto;
+    box-sizing: border-box;
 }
 
 .entrevista--log {

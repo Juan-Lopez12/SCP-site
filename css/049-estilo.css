@@ -1,41 +1,54 @@
+
+
 /*^ ----------------------------------- */
 /*^ -               GENERAL           - */
 /*^ ----------------------------------- */
 
+
 body {
-	background: #000;
-	color: #fff;
-	font-family: 'helvetica', sans-serif;
+    background: #000;
+    color: #fff;
+    font-family: "verdana", "helvetica", sans-serif;
 }
+
 
 /*^ ----------------------------------- */
 /*^ -               GRID              - */
 /*^ ----------------------------------- */
 
+
 .container {
-	width: 90%;
-	max-width: 1000px;
-	margin: 20px auto;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, auto);
-	grid-template-areas:
-		'header header header'
-		'wrapper wrapper wrapper'
-		'footer footer footer';
-	gap: 20px;
+    /* width: 90%;
+    max-width: 1000px;
+    margin: 20px auto; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header header header"
+    "wrapper wrapper wrapper"
+    "footer footer footer";
+    gap: 20px;
 }
 
 .header {
-	grid-area: header;
+    grid-area: header;
 }
 
 .wrapper {
-	grid-area: wrapper;
+    grid-area: wrapper;
 }
 
 .footer {
-	grid-area: footer;
+    grid-area: footer;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.container-logo, .nav__ul {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
 }
 
 /*^ ----------------------------------- */
@@ -181,6 +194,11 @@ body {
 /*^ -            CONTENIDO            - */
 /*^ ----------------------------------- */
 
+.scp {
+    width: 732px;
+    margin: 0 auto;
+    font-size: 13px;
+}
 
 .scp__h3 {
 	font-size: 2.5em;
@@ -190,21 +208,21 @@ body {
 
 .scp__image {
 	float: right;
-	margin-top: 20px;
 }
 
-.scp__image-img {
-	width: 380px;
+.scp__img {
+	width: 330px;
 }
 
 .scp__class {
-	margin-top: 10px;
-	margin-bottom: 40px;
-	width: 60%;
-	color: #000;
-	padding: 15px 0px;
-	font-size: 1.4em;
-	text-align: center;
+    font-family: "helvetica";
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 80%;
+    color: #000;
+    padding: 15px 0px;
+    font-size: 22.4px;
+    text-align: center;
 }
 
 .scp__h3, .scp__p, .scp__class--euclid, .logo__letra, .footer {
@@ -264,18 +282,19 @@ body {
 
 .xray {
 	float: left;
-	margin: 5px 20px 10px 20px;
+	margin: 5px 20px 10px 0px;
+	width: 400px;
+	transition: 300ms all ease;
+}
+
+.xray:hover {
+	width: 100%;
 }
 
 .xray__img {
 	border: 1px solid #9c9c9c;
 	box-sizing: border-box;
-	transition: 300ms all ease;
-	width: 400px;
-}
-
-.xray__img:hover {
-	width: 657px;
+	width: 100%;
 }
 
 .xray__div {
@@ -295,11 +314,12 @@ body {
 /*^ ----------------------------------- */
 
 .entrevista {
-	border: 1px dashed #9c9c9c;
-	background: #484f53;
-	padding: 20px 20px;
-	width: 65%;
-	margin: 20px auto;
+    border: 1px dashed #9c9c9c;
+    background: #484f53;
+    padding: 20px 20px;
+    width: 600px;
+    margin: 20px auto;
+    box-sizing: border-box;
 }
 
 .entrevista--log {
