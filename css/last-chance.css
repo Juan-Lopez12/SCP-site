@@ -103,3 +103,15 @@ footer {
     /* margin: auto; */
     color: #fff;
 }
+
+.creepy-font-family {
+    font-family: "Amatic SC";
+    line-height: .001em;
+    font-size: 34.52px;
+    /* display: inline-block; */
+    /* padding-top: 6px; */
+    letter-spacing: 2px;
+    font-weight: 100;
+    /* color: red; */
+    /* font-style: italic; */
+}

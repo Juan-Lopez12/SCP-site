@@ -6,47 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WHY ARE YOU HERE?</title>
     <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/WHY.css">
+    <link rel="stylesheet" href="css/GO-AWAY.CSS">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <header>
-        <div class="logo">
-            <img src="imagenes/mtf.jpg" width="200" alt="MTF">
+    <header class="header">
+        <div class="container-logo">
+            <div class="logo__image">
+                <img src="imagenes/mtf.jpg" width="200" alt="MTF">
+            </div>
+            <div class="logo__letra">
+                <h2>SCP Foundation</h2>
+            </div>
+            <div class="logo__idioma">
+                <ul class="logo__ul" >
+                    <li class="logo__li">
+                        <a class="logo__a" href="ES-scp/es-index.html">ESPAÑOL</a>
+                    </li>
+                    <li class="logo__li">
+                        <a class="logo__a" href="index.html">ENGLISH</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="idioma">
-            <ul>
-                <li><a href="ES-scp/es-WHY.html">ESPAÑOL</a></li>
-                <li><a href="WHY.html">ENGLISH</a></li>
-            </ul>
-        </div>
-        <div class="logo-letra">
-            <h2>SCP Foundation</h2>
-        </div>
-
-
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="scp-049.html">SCP-049</a></li>
-                <li><a href="last-chance.html"><b><i><span>WHY?</span></i></b></a></li>
-                <li><a href="scp-096.html">SCP-096</a></li>
-                <li><a href="scp-106.html">SCP-106</a></li>
-                <li><a href="scp-173.html">SCP-173</a></li>
-                <li><a href="scp-500.html">SCP-500</a></li>
-                <li><a href="scp-682.html">SCP-682</a></li>
-                <li><a href="">LOGIN</a></li>
+        <nav class="nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><a class="nav__a nav__a--light" href="index.html">HOME</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--euclid" href="scp-049.html">SCP-049</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--death" href="last-chance.html"><span class="nav__a-span creepy-font-family">WHY?</span></a></li>
+                <li class="nav__li"><a class="nav__a nav__a--euclid" href="scp-096.html">SCP-096</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--keter" href="scp-106.html">SCP-106</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--euclid" href="scp-173.html">SCP-173</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--safe" href="scp-500.html">SCP-500</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--keter" href="scp-682.html">SCP-682</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--light" href="">LOGIN</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="wrapper">
         <section class="main">
-            <article class="main-1">
-                WHY ARE YOU HERE? THERE IS LITERALLY NOTHING WAITING FOR YOU, NOR ITS YOUR BUSINESS AND YOU ARE TESTING MY PATIENCE. HERE WILL BE JUST DYING AND CHAOS FOR YOU IF YOU DECIDE TO KEEP GOING.
+            <article class="main-1 white-glow">
+                <span class="typed"></span>
+                <div id="go-away">
+                    <p>
+                        WHY ARE YOU HERE<span>?</span><span> </span>
+                        THERE IS LITERALLY NOTHING WAITING FOR YOU<span>,</span><span> </span>NOR ITS YOUR BUSINESS AND YOU ARE TESTING MY PATIENCE<span>.</span><span> </span>HERE WILL BE JUST DYING AND CHAOS FOR YOU IF YOU DECIDE TO KEEP GOING.
+                    </p>
+                </div>
             </article>
         </section>
     </section>
 
+    <script src="js/typed.js@2.0.12.js"></script>
+    <script src="js/GO-AWAY.js"></script>
 </body>
 </html>

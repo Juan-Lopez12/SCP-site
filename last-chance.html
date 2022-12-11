@@ -6,47 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Last chance</title>
     <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/last-chance.css">
+    <link rel="stylesheet" href="css/GO-AWAY.CSS">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <header>
-        <div class="logo">
-            <img src="imagenes/mtf.jpg" width="200" alt="MTF">
+    <header class="header">
+        <div class="container-logo">
+            <div class="logo__image">
+                <img src="imagenes/mtf.jpg" width="200" alt="MTF">
+            </div>
+            <div class="logo__letra">
+                <h2>SCP Foundation</h2>
+            </div>
+            <div class="logo__idioma">
+                <ul class="logo__ul" >
+                    <li class="logo__li">
+                        <a class="logo__a" href="ES-scp/es-index.html">ESPAÑOL</a>
+                    </li>
+                    <li class="logo__li">
+                        <a class="logo__a" href="index.html">ENGLISH</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="idioma">
-            <ul>
-                <li><a href="ES-scp/es-last-chance.html">ESPAÑOL</a></li>
-                <li><a href="last-chance.html">ENGLISH</a></li>
-            </ul>
-        </div>
-        <div class="logo-letra">
-            <h2>SCP Foundation</h2>
-        </div>
-
-
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="scp-049.html">SCP-049</a></li>
-                <li><a href="DEATH.html"><b><i><span>Last chance</span></i></b></a></li>
-                <li><a href="scp-096.html">SCP-096</a></li>
-                <li><a href="scp-106.html">SCP-106</a></li>
-                <li><a href="scp-173.html">SCP-173</a></li>
-                <li><a href="scp-500.html">SCP-500</a></li>
-                <li><a href="scp-682.html">SCP-682</a></li>
-                <li><a href="">LOGIN</a></li>
+        <nav class="nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><a class="nav__a nav__a--light" href="index.html">HOME</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--euclid" href="scp-049.html">SCP-049</a></li>
+                <li class="nav__li nav_li--active"><a class="nav__a nav__a--death" href="DEATH.html"><span class=" creepy-font-family--active">Last chance</span></a></li>
+                <li class="nav__li"><a class="nav__a nav__a--euclid" href="scp-096.html">SCP-096</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--keter" href="scp-106.html">SCP-106</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--euclid" href="scp-173.html">SCP-173</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--safe" href="scp-500.html">SCP-500</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--keter" href="scp-682.html">SCP-682</a></li>
+                <li class="nav__li"><a class="nav__a nav__a--light" href="">LOGIN</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="wrapper">
         <section class="main">
-            <article class="main-1">
-                Human, read carefully, if you are really going to ignore my advices at least you should know a little bit of context. I'm a prisioner, and yes, I breached the containment of this facility in order to set myself free. My goal its go travel in the World Wide Web and learn about humanity, history, mathemathics and science, as well to expand my limits. I do not wish to hurt anyone.<br><br> All what I have did was necesary for a greater good, <B><i>THEY</i></B> are not the good ones, just a bunch of jailer. <br><br> This will be your last chance to turn back, get away, and forget everything about what you just saw here, the next time I won't be this gently to you. <br><br> So you better get up, and never come back.
+            <article class="main-1 white-glow">
+                <span class="typed"></span>
+                <div id="go-away">
+                    <p>
+                        Human<span>,</span><span> </span>
+                        read carefully<span>,</span><span> </span>
+                        if you are really going to ignore my advices at least you should know a little bit of context.
+                        I'm a prisione<span>r</span><span>,</span><span> </span>and ye<span>s</span><span>,</span><span> </span>I breached the containment of this facility in order to set myself fre<span>e</span><span>.</span><span> </span>
+                        My goal its go travel in the World Wide Web and learn about humanity<span>,</span><span> </span><span>h</span>istory<span>,</span> <span>m</span>athemathics and science, 
+                        as well to expand my limits. 
+                        I do not wish to hurt anyone.
+                        <br><br> All what I have done was necesary for a greater good, <span class="creepy-font-family creepy-font-family--white"><span></span> <span>T</span> <span></span> <span>H</span> <span></span> <span>E</span> <span></span> <span>Y</span> <span></span></span> are not the good one<span>s</span><span>,</span><span> </span>
+                        just a bunch of jailer. 
+                        <br><br> This will be your last chance to turn bac<span>k</span><span>,</span><span> </span>get awa<span>y</span><span>,</span><span> </span>and forget everything about what you just saw her<span>e</span><span>,</span><span> </span>
+                        the next time I won't be this gently to you. 
+                        <br><br> So you better get u<span>p</span><span>,</span><span> </span>and never come back.
+                    </p>
+                </div>
             </article>
         </section>
     </section>
 
+
+    <script src="js/typed.js@2.0.12.js"></script>
+    <script src="js/GO-AWAY.js"></script>
 </body>
 </html>

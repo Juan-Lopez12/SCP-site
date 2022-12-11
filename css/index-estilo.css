@@ -17,9 +17,9 @@ body {
 
 
 .container {
-  width: 90%;
+  /* width: 90%;
   max-width: 1000px;
-  margin: 20px auto;
+  margin: 20px auto; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
@@ -40,6 +40,14 @@ body {
 
 .footer {
   grid-area: footer;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.container-logo, .nav__ul {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
 
@@ -174,6 +182,12 @@ body {
 /*^ ----------------------------------- */
 /*^ -            CONTENIDO            - */
 /*^ ----------------------------------- */
+
+.wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 .logo__letra, .footer {
   animation-iteration-count: infinite;
